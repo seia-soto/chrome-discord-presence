@@ -1,0 +1,31 @@
+{
+  "name": "Chrome Discord Rich-Presence",
+  "version": "1.0",
+  "description": "Discord Rich-Presence support for Google Chrome.",
+  "homepage_url": "https://soto.gq",
+  "permissions": [
+    "activeTab", "background"
+  ],
+  "background": {
+    "scripts": [
+      "scripts/background.js"
+    ],
+    "persistent": false
+  },
+  "page_action": {
+    "default_popup": "pages/intf.html",
+    "default_icon": {
+      "16": "images/branding/16.png",
+      "32": "images/branding/32.png",
+      "48": "images/branding/48.png",
+      "128": "images/branding/128.png"
+    }
+  },
+  "icons": {
+    "16": "images/branding/16.png",
+    "32": "images/branding/32.png",
+    "48": "images/branding/48.png",
+    "128": "images/branding/128.png"
+  },
+  "manifest_version": 2
+}
