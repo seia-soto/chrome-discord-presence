@@ -6,13 +6,8 @@
   "permissions": [
     "activeTab", "background"
   ],
-  "background": {
-    "scripts": [
-      "scripts/background.js"
-    ],
-    "persistent": false
-  },
-  "page_action": {
+  "browser_action": {
+    "default_title": "Discord RPC for Chrome",
     "default_popup": "pages/intf.html",
     "default_icon": {
       "16": "images/branding/16.png",
