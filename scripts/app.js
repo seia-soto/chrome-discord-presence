@@ -46,6 +46,7 @@ $(document).ready(function() {
 
       switch (key) {
         case 'client-statics':
+          $('#textStatusClientPresence').text('Playing Chrome - ' + data.tab)
           $('#textStatusClientPing').text(Math.round(data.ping) + 'ms')
           $('#textStatusClientUser').text(data.account)
           break;
