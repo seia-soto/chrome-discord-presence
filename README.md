@@ -7,6 +7,7 @@ Discord Presence extension for Google Chrome.
 - [Installation](#Installation)
 - [Usage](#Usage)
 - [Notice](#Notice)
+- [Updates](#Updates)
 
 ### Installation
 
@@ -47,3 +48,7 @@ After you installed this extension, you need to open Discord via web browser to 
 - **You can request support of this application(extension) via any contactable form.** Your account is important to me and there is no warranty. However I'll help you if you have any questions. You can use issues tab or links in extension.
 
 - **Make sure that you are using latest version of extension.** For your security as I said above.
+
+### Updates
+
+- `1.0.1`: Add caching to reduce traffic and set refresh rate to 3.
