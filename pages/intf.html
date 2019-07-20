@@ -1,161 +1,116 @@
 <!DOCTYPE html>
-<html lang="ko" dir="ltr">
+<html>
   <head>
     <meta charset="utf-8">
-    <title>Aka</title>
+    <title>Chrome Discord Presence</title>
 
-    <!-- Metadata -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="Seia-Soto">
-    <meta name="description" content="Aka, Seia Soto. 아카- 세야!">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 
-    <!-- Aka -->
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link rel="stylesheet" href="../ui/semantic.min.css">
+    <script src="../scripts/libs/jquery.js" charset="utf-8"></script>
+    <script src="../ui/semantic.min.js" charset="utf-8"></script>
+    <script src="../scripts/app.js" charset="utf-8"></script>
+
     <style media="screen">
-      body {
-        width: 324px;
-        height: 486px;
+      html {
+        height: 580px;
+        width: 340px;
       }
-      .aka {
-        /* Copyright 2018 Seia-Soto, All rights reserved. */
-      }
-
-      .navigating {
-        min-height: 50px;
-        width: 100%;
-        padding-top: 5px;
-        background-color: #23272a;
-      }
-      .mashing {
-        background-color: #23272a;
-        height: 400px;
-      }
-      .footering {
-        min-height: 70px;
-        width: 100%;
-        padding-top: 5px;
-        background-color: #23272a;
-      }
-
-      .page {
-        padding-top: 35px;
-      }
-        .additional {
-          display: none;
-        }
-          .project {
-            /* Additional project cards */
-          }
-        .dark {
-          background-color: #23272a;
-        }
-        .distance {
-          padding-bottom: 0px;
-        }
-          .short {
-            padding-bottom: 20px;
-          }
-          .medium {
-            padding-bottom: 100px;
-          }
-          .long {
-            padding-bottom: 200px;
-          }
-          .full {
-            height: 100%;
-          }
-
-      .aligned {
-        /* ... */
-      }
-        .right {
-          float: right;
-        }
-        .left {
-          float: left;
-        }
-      .colored {
-        color: white;
-      }
-        .white {
-          color: white;
-        }
-        .red {
-          color: red;
-        }
-        .orange {
-          color: orange;
-        }
-        .yellow {
-          color: yellow;
-        }
-        .green {
-          color: green;
-        }
-        .skyblue {
-          color: skyblue;
-        }
-        .blue {
-          color: blue;
-        }
-        .purple {
-          color: purple;
-        }
-        .brown {
-          color: brown;
-        }
-        .gray {
-          color: gray;
-        }
-          .lightgray {
-            color: lightgray;
-          }
-          .darkslategray {
-            color: #2f4f4f;
-          }
-        .black {
-          color: black;
-        }
-      .gradient {
-        background: white;
-      }
-        .vicious_stance {
-          background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-        }
     </style>
-    <script src="assets/scripts/aka.js" charset="utf-8"></script>
-    <!-- Semantic-UI -->
-    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
-  <body class="aka">
-    <header>
-      <div class="aka navigating">
-        <div class="ui inverted container">
-          <nav class="aka navigation">
-            <div class="ui inverted secondary menu">
-              <a class="ui active item">
-                RPC
-              </a>
-              <a class="right item">
-                Discord
-              </a>
-            </div>
-          </nav>
+  <body>
+    <article style="padding-top: 10px;">
+      <!-- NOTE: Empty -->
+    </article>
+
+    <!-- NOTE: Messages -->
+    <div class="ui container">
+      <div id="messageUpdateToken" class="ui info message">
+        <div class="header">
+          Update your token of Discord account!
+        </div>
+        <ul class="list">
+          <li>Why? We need to access your account to set presence.</li>
+          <li>How? Just open <a id="linkDiscordapp" href="https://discordapp.com/app">Discordapp</a>.</li>
+        </ul>
+
+        <div class="ui basic segment">
+          <button id="buttonReloadStatus" class="ui fluid secondary button">Retry</button>
         </div>
       </div>
-    </header>
-    <div class="aka page">
-      <div class="ui container">
-        <span>Discord RPC는 당신의 프로필에 표시됩니다!</span>
+    </div>
+
+    <div class="ui basic container segment">
+      <h3>Settings</h3>
+      <div class="ui divider"></div>
+
+      <div id="checkboxEnablePresence" class="ui toggle checkbox">
+        <input type="checkbox" name="public" disabled>
+        <label>Enable Rich-Presence</label>
       </div>
     </div>
-    <footer>
-      <div class="aka short distance footering page">
-        <div class="ui container">
-          <h4 class="ui inverted header">
-            Aka
-          </h4>
-          <p class="aka white colored">Copyright 2018 Seia-Soto. All rights reserved.</p>
+    <div id="sectionClientStatus" class="ui basic container segment" style="display: none;">
+      <h3>Statics</h3>
+      <div class="ui divider"></div>
+
+      <div class="ui list">
+        <div class="item">
+          <div class="header">Ping</div>
+          <span id="textStatusClientPing">(pending)</span>
+        </div>
+        <div class="item">
+          <div class="header">Account</div>
+          <span id="textStatusClientUser">(pending)</span>
+        </div>
+      </div>
+    </div>
+
+    <footer class="ui inverted vertical footer segment">
+      <div class="ui center aligned container">
+        <div class="ui stackable inverted divided grid">
+          <div class="four wide column">
+            <h4 class="ui inverted header">Chrome Discord Presence</h4>
+            <div class="ui inverted link list">
+              <a class="item" href="https://seia.io/products/chrome-discord-presence#privacy-policy">
+                Privacy Policy
+              </a>
+            </div>
+          </div>
+          <div class="four wide column">
+            <h4 class="ui inverted header">Social</h4>
+            <div class="ui inverted link list">
+              <a class="item" href="https://twitter.com/Seia_Soto">
+                <i class="twitter icon"></i>
+                Twitter
+              </a>
+              <a class="item" href="https://github.com/Seia-Soto">
+                <i class="github icon"></i>
+                GitHub
+              </a>
+              <a class="item" href="https://discordapp.com/invite/NjAjJqB">
+                <i class="discord icon"></i>
+                Discordapp
+              </a>
+              <a class="item" href="mailto:seia@outlook.kr">
+                <i class="mail icon"></i>
+                Mail
+              </a>
+            </div>
+          </div>
+          <div class="eight wide column">
+            <h4 class="ui inverted header">Seia Soto</h4>
+            <p>
+              Seia(せいあそと{セイアソト}) is student who is developing with small base as well.<br>
+              Known as learner, writer, translator, developer and illustrator.
+            </p>
+          </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <img class="ui centered mini image" src="https://seia.io/assets/images/n_avatarsize.jpg" />
+        <div class="ui horizontal inverted small divided link list">
+          <a class="item" href="https://github.com/Seia-Soto/chrome-discord-presence">
+            Copyright 2019 Seia-Soto. All rights reserved.
+          </a>
         </div>
       </div>
     </footer>
