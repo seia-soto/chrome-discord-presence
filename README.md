@@ -13,7 +13,7 @@ Discord Presence extension for Google Chrome.
 
 You need to install via compressed or extracted extension source because this extension is not available on Chrome web store.
 
-- [Are you searching for compressed extension(.crx)](https://github.com/Seia-Soto/chrome-discord-presence/raw/master/dist/1.0.0/chrome-discord-presence.crx)
+- [Are you searching for compressed extension(.crx)?](https://github.com/Seia-Soto/chrome-discord-presence/tree/master/dist)
 
 1. Go to [releases tab](https://github.com/Seia-Soto/chrome-discord-presence/releases) and download latest release.
 
@@ -21,7 +21,7 @@ You need to install via compressed or extracted extension source because this ex
 
 3. Enable developer mode at right top of page and click 'Load unpacked extension...' button.
 
-4. Locate folder of extracted zip archive and click 'Select folder(directory)' to finalize installation.
+4. Locate folder `src` inside of extracted zip archive and click 'Select folder(directory)' to finalize installation.
 
 5. You can see Discord icon at right top from under the Chrome tabs.
 
