@@ -40,7 +40,7 @@ chrome.extension.onConnect.addListener(function(port) {
               updateActivity()
               intervalTask = setInterval(function() {
                 updateActivity()
-              }, 1000 * 5)
+              }, 1000 * 3)
             })
           } else {
             status = 'invalid-token'
