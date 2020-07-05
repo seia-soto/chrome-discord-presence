@@ -15,6 +15,8 @@ You need to install via compressed or extracted extension source because this ex
 
 - [Are you searching for compressed extension(.crx)?](https://github.com/Seia-Soto/chrome-discord-presence/tree/master/dist)
 
+> `crx` files are no longer provided after v1.0.1.
+
 1. Go to [releases tab](https://github.com/Seia-Soto/chrome-discord-presence/releases) and download latest release.
 
 2. Extract the zip archive and go to [Chrome extensions management page(chrome://extensions)](chrome://extensions).
@@ -33,7 +35,7 @@ After you installed this extension, you need to open Discord via web browser to 
 
 2. Tab 'Enable Rich Presence' button.
 
-- If you're on first-run of extension or your token was expired, you can see prompt to open Discord via web browser. Then just open Discord via web browser(not main page) and click retry button inside of prompt. Extension will detect your token from urls below: `https://discordapp.com/app`, `https://discordapp.com/activity`, `https://discordapp.com/channels/@me`
+- If you're on first-run of extension or your token was expired, you can see prompt to open Discord via web browser. Then just open Discord via web browser(not main page) and click retry button inside of prompt. Extension will detect your token from urls below: `https://discordapp.com/app`, `https://discordapp.com/activity`, `https://discordapp.com/channels/@me`, `https://discord.com/app`, `https://discord.com/activity`, `https://discord.com/channels/@me`
 
 3. Finally, you can see you're playing 'Chrome - {ACTIVE_TAB_NAME}' on Discord.
 
@@ -52,3 +54,5 @@ After you installed this extension, you need to open Discord via web browser to 
 ### Updates
 
 - `1.0.1`: Add caching to reduce traffic and set refresh rate to 3.
+
+- `1.0.2`: Update Discord website URLs.

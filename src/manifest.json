@@ -4,7 +4,7 @@
   "description": "Discord presence support for Google Chrome.",
   "homepage_url": "https://seia.io/",
   "permissions": [
-    "activeTab", "background", "storage", "*://*/*"
+    "activeTab", "background", "storage", "https://*/*"
   ],
   "browser_action": {
     "default_title": "Chrome Discord Rich Presence",
@@ -35,7 +35,10 @@
       "matches": [
         "https://discordapp.com/activity",
         "https://discordapp.com/app",
-        "https://discordapp.com/channels/@me"
+        "https://discordapp.com/channels/@me",
+        "https://discord.com/activity",
+        "https://discord.com/app",
+        "https://discord.com/channels/@me"
       ],
       "js": [
         "scripts/getToken.js"
