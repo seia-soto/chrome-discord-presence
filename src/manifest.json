@@ -1,6 +1,6 @@
 {
   "name": "Chrome Discord Presence",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Discord presence support for Google Chrome.",
   "homepage_url": "https://seia.io/",
   "permissions": [
