@@ -8,7 +8,7 @@
   ],
   "browser_action": {
     "default_title": "Chrome Discord Rich Presence",
-    "default_popup": "pages/intf.html",
+    "default_popup": "interface/index.html",
     "default_icon": {
       "16": "images/branding/16.png",
       "32": "images/branding/32.png",
@@ -24,7 +24,6 @@
   },
   "background": {
     "scripts": [
-      "scripts/libs/webextension-polyfill.js",
       "scripts/libs/discord.js",
       "scripts/background.js"
     ]

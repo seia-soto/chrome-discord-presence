@@ -1,3 +1,3 @@
-[submodule "src/interface"]
-	path = src/interface
-	url = https://github.com/Seia-Soto/chrome-discord-presence.frontend.git
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/Seia-Soto/chrome-discord-presence.frontend
