@@ -58,3 +58,5 @@ After you installed this extension, you need to open Discord via web browser to 
 - `1.0.1`: Add caching to reduce traffic and set refresh rate to 3.
 
 - `1.0.2`: Update Discord website URLs.
+
+- `1.1.0`: Update Discord.JS library and edit some codes to make your account can access to Discord API correctly.
