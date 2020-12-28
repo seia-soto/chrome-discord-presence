@@ -2,6 +2,8 @@
 
 Discord Presence extension for Google Chrome.
 
+> By updating the `Discord.JS` library, I am using modified version of Discord.JS to make your account token work.
+
 ## Table of Contents
 
 - [Installation](#Installation)

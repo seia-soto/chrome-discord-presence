@@ -1,8 +1,8 @@
 {
   "name": "Chrome Discord Presence",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Discord presence support for Google Chrome.",
-  "homepage_url": "https://seia.io/",
+  "homepage_url": "https://github.com/seia.io/chrome-discord-presence",
   "permissions": [
     "activeTab", "background", "storage", "https://*/*"
   ],
@@ -32,9 +32,11 @@
     {
       "run_at": "document_start",
       "matches": [
+        "https://discordapp.com/",
         "https://discordapp.com/activity",
         "https://discordapp.com/app",
         "https://discordapp.com/channels/@me",
+        "https://discord.com/",
         "https://discord.com/activity",
         "https://discord.com/app",
         "https://discord.com/channels/@me"
